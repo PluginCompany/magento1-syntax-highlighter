@@ -1,0 +1,6 @@
+app/code/community/Plugincompany/Syntaxhighlighter app/code/community/Plugincompany/Syntaxhighlighter
+app/design/adminhtml/default/default/layout/plugincompany_syntaxhighlighter.xml app/design/adminhtml/default/default/layout/plugincompany_syntaxhighlighter.xml
+app/design/adminhtml/default/default/template/plugincompany/syntaxhighlighter app/design/adminhtml/default/default/template/plugincompany/syntaxhighlighter
+app/etc/modules/Plugincompany_Syntaxhighlighter.xml app/etc/modules/Plugincompany_Syntaxhighlighter.xml
+js/plugincompany/codemirror js/plugincompany/codemirror
+js/plugincompany/jquerynoconflict.js js/plugincompany/jquerynoconflict.js

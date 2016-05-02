@@ -1,0 +1,91 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright (c) 2014-2026 Plugin Company
+ *
+ * This file is part of Syntax Highlighter, released under the MIT License.
+ * See the LICENSE file in the project root.
+ */
+-->
+<layout>
+   <adminhtml_cms_block_edit>
+       <update handle="plugincompany_codemirror" />
+    </adminhtml_cms_block_edit>
+
+    <adminhtml_cms_page_edit>
+        <update handle="plugincompany_codemirror" />
+    </adminhtml_cms_page_edit>
+
+    <adminhtml_catalog_product_edit>
+        <update handle="plugincompany_codemirror" />
+    </adminhtml_catalog_product_edit>
+
+    <adminhtml_newsletter_template_new>
+        <update handle="plugincompany_codemirror" />
+    </adminhtml_newsletter_template_new>
+
+    <adminhtml_newsletter_template_edit>
+        <update handle="plugincompany_codemirror" />
+    </adminhtml_newsletter_template_edit>
+
+    <adminhtml_catalog_category_edit>
+        <update handle="plugincompany_codemirror" />
+    </adminhtml_catalog_category_edit>
+
+    <adminhtml_system_email_template_edit>
+        <update handle="plugincompany_codemirror" />
+    </adminhtml_system_email_template_edit>
+
+    <plugincompany_codemirror>
+        <reference name="head">
+            <action method="addJs">
+                <script>plugincompany/jquerynoconflict.js</script>
+            </action>
+            <action method="addJs">
+                <script>plugincompany/codemirror/codemirror-compressed.js</script>
+            </action>
+            <action method="addItem">
+                <type>js_css</type>
+                <name>plugincompany/codemirror/show-hint.css</name>
+            </action>
+            <action method="addItem">
+                <type>js_css</type>
+                <name>plugincompany/codemirror/codemirror.css</name>
+            </action>
+            <action method="addItem">
+                <type>js_css</type>
+                <name>plugincompany/codemirror/fullscreen.css</name>
+            </action>
+        </reference>
+        <reference name="content" after="-">
+            <block type="plugincompany_syntaxhighlighter/syntaxhighlighter" template="plugincompany/syntaxhighlighter/syntaxhighlighter.phtml"/>
+        </reference>
+    </plugincompany_codemirror>
+
+    <!-- clever CMS -->
+    <adminhtml_cms_page_index>
+        <reference name="head">
+            <action method="addJs">
+                <script>plugincompany/jquerynoconflict.js</script>
+            </action>
+            <action method="addJs">
+                <script>plugincompany/codemirror/codemirror-compressed.js</script>
+            </action>
+            <action method="addItem">
+                <type>js_css</type>
+                <name>plugincompany/codemirror/show-hint.css</name>
+            </action>
+            <action method="addItem">
+                <type>js_css</type>
+                <name>plugincompany/codemirror/codemirror.css</name>
+            </action>
+            <action method="addItem">
+                <type>js_css</type>
+                <name>plugincompany/codemirror/fullscreen.css</name>
+            </action>
+        </reference>
+        <reference name="before_body_end" after="-">
+            <block type="plugincompany_syntaxhighlighter/syntaxhighlighter" template="plugincompany/syntaxhighlighter/syntaxhighlighter.phtml"/>
+        </reference>
+    </adminhtml_cms_page_index>
+</layout>

@@ -1,0 +1,71 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright (c) 2014-2026 Plugin Company
+ *
+ * This file is part of Syntax Highlighter, released under the MIT License.
+ * See the LICENSE file in the project root.
+ */
+-->
+<config>
+    <modules>
+        <Plugincompany_Syntaxhighlighter>
+            <version>1.0.3</version>
+        </Plugincompany_Syntaxhighlighter>
+    </modules>
+    <global>
+        <blocks>
+            <plugincompany_syntaxhighlighter>
+                <class>Plugincompany_Syntaxhighlighter_Block</class>
+            </plugincompany_syntaxhighlighter>
+        </blocks>
+        <helpers>
+            <plugincompany_syntaxhighlighter>
+                <class>Plugincompany_Syntaxhighlighter_Helper</class>
+            </plugincompany_syntaxhighlighter>
+        </helpers>
+    </global>
+    <adminhtml>
+        <layout>
+            <updates>
+                <plugincompany_syntaxhighlighter>
+                    <file>plugincompany_syntaxhighlighter.xml</file>
+                </plugincompany_syntaxhighlighter>
+            </updates>
+        </layout>
+        <acl>
+            <resources>
+                <admin>
+                    <children>
+                        <system>
+                            <children>
+                                <config>
+                                    <children>
+                                        <plugincompany_syntaxhighlighter>
+                                            <title>Syntax Highlighter Config</title>
+                                        </plugincompany_syntaxhighlighter>
+                                    </children>
+                                </config>
+                            </children>
+                        </system>
+                    </children>
+                </admin>
+            </resources>
+        </acl>
+    </adminhtml>
+    <default>
+        <plugincompany_syntaxhighlighter>
+            <plugincompany_syntaxhighlighter_group>
+                <enabled>1</enabled>
+                <cms_page>1</cms_page>
+                <cms_block>1</cms_block>
+                <product>1</product>
+                <categories>1</categories>
+                <category_fields>custom_layout_update,description,meta_description,meta_keywords</category_fields>
+                <product_fields>custom_layout_update,description,in_depth,meta_description,meta_keyword,short_description</product_fields>
+                <newsletter>1</newsletter>
+                <transactional>1</transactional>
+            </plugincompany_syntaxhighlighter_group>
+        </plugincompany_syntaxhighlighter>
+    </default>
+</config>
